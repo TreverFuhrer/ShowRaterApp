@@ -14,9 +14,21 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Button(action: { buttonPress() }) {
+                Text("button")
+                    .font(.title)
+                    .frame(width: 85, height: 70)
+                    .background(Color.black)
+                    .foregroundStyle(Color.blue)
+                    .cornerRadius(10)
+            }
         }
         .padding()
     }
+}
+
+func buttonPress() {
+    print("poop")
 }
 
 #Preview {
